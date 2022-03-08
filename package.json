@@ -11,10 +11,12 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~12.2.0",
+    "@angular/cdk": "^12.2.13",
     "@angular/common": "~12.2.0",
     "@angular/compiler": "~12.2.0",
     "@angular/core": "~12.2.0",
     "@angular/forms": "~12.2.0",
+    "@angular/material": "^12.2.13",
     "@angular/platform-browser": "~12.2.0",
     "@angular/platform-browser-dynamic": "~12.2.0",
     "@angular/router": "~12.2.0",
@@ -27,6 +29,7 @@
     "@angular/cli": "~12.2.6",
     "@angular/compiler-cli": "~12.2.0",
     "@types/jest": "^27.4.1",
+    "@types/lodash": "^4.14.179",
     "@types/node": "^12.11.1",
     "jest": "^27.5.1",
     "jest-preset-angular": "^11.1.1",
@@ -41,7 +44,8 @@
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/",
       "<rootDir>/dist/",
-      "<rootDir>/src/test.ts"
+      "<rootDir>/src/test.ts",
+      "<rootDir>/src/app/app.component.spec.ts"
     ]
   }
 }

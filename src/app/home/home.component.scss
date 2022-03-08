@@ -1,0 +1,87 @@
+header {
+	background-color: #191414;
+	height: 64px;
+	display: flex;
+	justify-content: space-between;
+
+	.spotify {
+		height: 100%;
+	}
+
+	.devmagic {
+		padding: 6px;
+    border-radius: 50px;
+	}
+}
+
+.tracks-list {
+	height: calc(100vh - 223px);
+	overflow: auto;
+}
+
+.track {
+	display: flex;
+	border-radius: 8px;
+	padding: 8px;
+	transition: all .2s;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+
+	&:hover {
+		background: rgb(112 112 112 / 20%);
+	}
+}
+
+mat-form-field {
+	width: 100%;
+	font-size: 20px;
+}
+
+.naosei {
+	position: relative; 
+	height: 64px;
+}
+
+.music-actions {
+	position: absolute;
+	color: #FFF;
+	left: 0;
+	height: 100%;
+	transition: all .2s;
+	opacity: 0;
+
+	&:hover,
+	&.activated {
+		background: rgba(0,0,0, 0.3);
+		opacity: 1;
+	}
+	
+}
+
+.oi {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 16px;
+
+	p {
+		margin: 0;
+		font-size: 16px;
+		justify-content: center;
+		color: #707070;
+		transition: all;
+
+		&:first-of-type {
+			font-size: 22px;
+			margin-bottom: 8px;
+			font-weight: 500;
+			color: #191414;
+
+			&.activated {
+				color: #1ED760;
+			}
+		}
+	}
+}

@@ -1,0 +1,36 @@
+<header>
+	<img class='spotify' src='https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Spotify_App_Logo.svg/1024px-Spotify_App_Logo.svg.png'>
+	<img class='devmagic' src='https://media-exp1.licdn.com/dms/image/C4D0BAQEcfZYNlg_how/company-logo_200_200/0/1615761113439?e=2159024400&v=beta&t=o5p6SptWpvlJ-EWdMvzfO2oLTD1-QnbdhO70f3IEMyA'>
+</header>
+
+<div style='padding: 24px 72px;'>
+	<mat-form-field appearance="outline">
+		<mat-label>Pesquisar</mat-label>
+		<input matInput placeholder="" [formControl]="searchInput" (keydown.enter)='search()'>
+		<mat-icon matSuffix class='btn' (click)='search()'>sentiment_very_satisfied</mat-icon>
+	</mat-form-field>
+	
+	<div *ngIf='tracks.items?.length' class="tracks-list">
+		<div *ngFor='let track of tracks.items' class='track animate__animated animate__fadeInDown'>
+			<div class='naosei'>
+				<img [src]='track.album.images[2].url'>
+
+				<button class='music-actions' mat-button (click)="play(track)" *ngIf="!track.playing">
+					<mat-icon mat-list-icon>play_circle_filled</mat-icon>
+				</button>
+	
+				<button class='music-actions' mat-button (click)="pause(track)" *ngIf="track.playing" [ngClass]="{'activated' : track.playing}">
+					<mat-icon mat-list-icon>pause</mat-icon>
+				</button>
+			</div>
+
+			<div class='oi'>
+				<p [ngClass]="{'activated' : track.playing}">{{track.name}}</p>
+				<p>{{track.formattedArtists}}</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- <button (click)='search()'>click</button> -->
+
