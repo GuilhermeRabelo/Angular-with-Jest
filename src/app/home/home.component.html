@@ -10,7 +10,7 @@
 		<mat-icon matSuffix class='btn' (click)='search()'>sentiment_very_satisfied</mat-icon>
 	</mat-form-field>
 	
-	<div *ngIf='tracks.items?.length' class="tracks-list">
+	<div *ngIf='tracks?.items?.length' class="tracks-list">
 		<div *ngFor='let track of tracks.items' class='track animate__animated animate__fadeInDown'>
 			<div class='naosei'>
 				<img [src]='track.album.images[2].url'>

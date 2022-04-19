@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HomeService } from './service/home.service';
 import * as _ from 'lodash';
 import { FormControl } from '@angular/forms';
+// import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -22,7 +23,8 @@ export class HomeComponent implements OnInit {
   audio = new Audio();
 
   constructor(
-    private homeService: HomeService
+    private homeService: HomeService,
+    // private router: Router
   ) { }
 
   ngOnInit() {  
@@ -56,5 +58,9 @@ export class HomeComponent implements OnInit {
     track.playing = false;
     this.audio.pause();
   }
+
+  // goToTrack() {
+  //   this.router.navigate(['/teste']);
+  // }
 
 }
